@@ -11,21 +11,28 @@
     <Compile Remove="ApplicationProjetoBack\**" />
     <Compile Remove="DomainProjetoBack\**" />
     <Compile Remove="RepositoryProjetoBack\**" />
+    <Compile Remove="TestProject1\**" />
     <Content Remove="ApplicationProjetoBack\**" />
     <Content Remove="DomainProjetoBack\**" />
     <Content Remove="RepositoryProjetoBack\**" />
+    <Content Remove="TestProject1\**" />
     <EmbeddedResource Remove="ApplicationProjetoBack\**" />
     <EmbeddedResource Remove="DomainProjetoBack\**" />
     <EmbeddedResource Remove="RepositoryProjetoBack\**" />
+    <EmbeddedResource Remove="TestProject1\**" />
     <None Remove="ApplicationProjetoBack\**" />
     <None Remove="DomainProjetoBack\**" />
     <None Remove="RepositoryProjetoBack\**" />
+    <None Remove="TestProject1\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+    <PackageReference Include="Moq" Version="4.20.70" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    <PackageReference Include="xunit.assert" Version="2.4.2" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.7.0" />
   </ItemGroup>
 
   <ItemGroup>

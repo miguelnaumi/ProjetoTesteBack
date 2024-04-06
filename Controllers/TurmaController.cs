@@ -50,11 +50,6 @@ namespace ServiceProjetoBack.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var turma = await _turmaService.GetTurmaById(id);
-            if (turma == null)
-            {
-                return NotFound();
-            }
             return await ResolveResponse(_turmaService.DeleteTurma(id), EnumeratorsCommons.DataOperation.Delete);
         }
     }

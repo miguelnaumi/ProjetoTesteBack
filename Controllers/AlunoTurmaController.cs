@@ -50,11 +50,6 @@ namespace ServiceProjetoBack.Controllers
         [HttpDelete("{idTurma}/{idAluno}")]
         public async Task<ActionResult> Delete(int idTurma, int idAluno)
         {
-            var alunoturma = await _alunoturmaService.GetAlunoTurmaById(idTurma, idAluno);
-            if (alunoturma == null)
-            {
-                return NotFound();
-            }
             return await ResolveResponse(_alunoturmaService.DeleteAlunoTurma(idTurma, idAluno), EnumeratorsCommons.DataOperation.Delete);
         }
 

@@ -49,11 +49,6 @@ namespace ServiceProjetoBack.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var aluno = await _alunoService.GetAlunoById(id);
-            if (aluno == null)
-            {
-                return NotFound();
-            }
             return await ResolveResponse(_alunoService.DeleteAluno(id), EnumeratorsCommons.DataOperation.Delete);
         }
 
