@@ -1,0 +1,40 @@
+
+CREATE DATABASE faculdade;
+GO
+
+USE faculdade;
+GO
+
+CREATE TABLE Aluno (
+    Id INT PRIMARY KEY IDENTITY,
+    Nome NVARCHAR(100) NOT NULL,
+    Semestre INT NOT NULL,
+    Usuario NVARCHAR(50) NOT NULL,
+    Senha NVARCHAR(100) NOT NULL
+);
+GO
+
+CREATE TABLE Curso (
+    Id INT PRIMARY KEY IDENTITY,
+    Nome NVARCHAR(100) NOT NULL,
+    DuracaoSemestre INT NOT NULL
+);
+GO
+
+CREATE TABLE Turma (
+    Id INT PRIMARY KEY IDENTITY,
+    IdCurso INT NOT NULL,
+    Nome NVARCHAR(50) NOT NULL,
+    Ano INT NOT NULL,
+	FOREIGN KEY (IdCurso) REFERENCES Curso(id)
+);
+GO
+
+CREATE TABLE AlunoTurma (
+    IdAluno INT NOT NULL,
+    IdTurma INT NOT NULL,
+    PRIMARY KEY (IdAluno, IdTurma),
+    FOREIGN KEY (IdAluno) REFERENCES Aluno(id),
+    FOREIGN KEY (IdTurma) REFERENCES Turma(id)
+);
+GO
