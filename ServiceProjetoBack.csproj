@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>false</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ApplicationProjetoBack\**" />
+    <Compile Remove="DomainProjetoBack\**" />
+    <Compile Remove="RepositoryProjetoBack\**" />
+    <Content Remove="ApplicationProjetoBack\**" />
+    <Content Remove="DomainProjetoBack\**" />
+    <Content Remove="RepositoryProjetoBack\**" />
+    <EmbeddedResource Remove="ApplicationProjetoBack\**" />
+    <EmbeddedResource Remove="DomainProjetoBack\**" />
+    <EmbeddedResource Remove="RepositoryProjetoBack\**" />
+    <None Remove="ApplicationProjetoBack\**" />
+    <None Remove="DomainProjetoBack\**" />
+    <None Remove="RepositoryProjetoBack\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="ApplicationProjetoBack\ApplicationProjetoBack.csproj" />
+    <ProjectReference Include="DomainProjetoBack\DomainProjetoBack.csproj" />
+    <ProjectReference Include="RepositoryProjetoBack\RepositoryProjetoBack.csproj" />
+  </ItemGroup>
+
+</Project>
